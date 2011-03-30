@@ -33,9 +33,6 @@ projects[dialog][version] = "1.0-alpha2"
 projects[evoc][subdir] = "contrib"
 projects[evoc][version] = "1.0-alpha2"
 
-projects[features][subdir] = "contrib"
-projects[features][version] = "1.0"
-
 projects[feeds][subdir] = "contrib"
 projects[feeds][version] = "1.0-beta10"
 
@@ -93,6 +90,19 @@ projects[views_tabs][version] = "1.0-beta1"
 projects[job_scheduler][subdir] = "contrib"
 projects[job_scheduler][version] = "1.0-beta3"
 
+projects[strongarm][subdir] = "contrib"
+projects[strongarm][version] = "2.0"
+
+projects[uuid][subdir] = "contrib"
+projects[uuid][version] = "1.x-dev"
+
+projects[uuid_features][subdir] = "contrib"
+projects[uuid_features][version] = "1.0-alpha1"
+
+projects[advanced_help][subdir] = "contrib"
+projects[advanced_help][version] = "1.2"
+
+
 
 ; Patched
 projects[views][subdir] = "patched"
@@ -109,6 +119,10 @@ projects[sparql_views][download][url] = "git@github.com:istos/sparql_views.git"
 projects[sparql_views][type] = "module"
 
 
+projects[features][subdir] = "patched"
+projects[features][version] = "1.0"
+projects[features][patch][] = "http://drupal.org/files/issues/968826-features-menu-uuid.patch"
+
 ; Sandbox
 projects[rdfimporter][subdir] = "contrib"
 projects[rdfimporter][download][type] = "git"
@@ -119,39 +133,11 @@ projects[rdfimporter][type] = "module"
 ; Features
 ; Please fill the following out. Type may be one of get, cvs, git, bzr or svn,
 ; and url is the url of the download.
-;projects[indicatornode][download][type] = ""
-;projects[indicatornode][download][url] = ""
-;projects[indicatornode][type] = "module"
-;projects[indicatornode][subdir] = "sites/all/modules/features/indicatornode"
-;projects[indicatornode][version] = "1.1-dev"
-
-; Please fill the following out. Type may be one of get, cvs, git, bzr or svn,
-; and url is the url of the download.
-;projects[indicatorresults][download][type] = ""
-;projects[indicatorresults][download][url] = ""
-;projects[indicatorresults][type] = "module"
-;projects[indicatorresults][subdir] = "sites/all/modules/features/indicatorresults"
-;projects[indicatorresults][version] = "1.3-dev"
 
 
 ; Themes
 ; Please fill the following out. Type may be one of get, cvs, git, bzr or svn,
 ; and url is the url of the download.
-;projects[ldp][download][type] = ""
-;projects[ldp][download][url] = ""
-;projects[ldp][type] = "theme"
-
-; Please fill the following out. Type may be one of get, cvs, git, bzr or svn,
-; and url is the url of the download.
-
-projects[rubik][version] = "3.0-beta2"
-projects[rubik][type] = "theme"
-
-projects[tao][version] = "3.2"
-projects[tao][type] = "theme"
-
-projects[jake][location] = http://code.developmentseed.org/fserver
-projects[jake][version] = 1.0-beta15
 
 
 ; Libraries
