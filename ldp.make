@@ -52,7 +52,7 @@ projects[panels][subdir] = "contrib"
 projects[panels][version] = "3.9"
 
 projects[panels_tabs][subdir] = "contrib"
-projects[panels_tabs][version] = "1.0-rc6"
+projects[panels_tabs][version] = "1.x-dev"
 
 projects[pathauto][subdir] = "contrib"
 projects[pathauto][version] = "1.5"
@@ -79,7 +79,7 @@ projects[sparql][subdir] = "contrib"
 projects[sparql][version] = "1.0-alpha1"
 
 projects[tabs][subdir] = "contrib"
-projects[tabs][version] = "1.3"
+projects[tabs][version] = "1.x-dev"
 
 projects[token][subdir] = "contrib"
 projects[token][version] = "1.15"
@@ -97,7 +97,7 @@ projects[uuid][subdir] = "contrib"
 projects[uuid][version] = "1.x-dev"
 
 projects[uuid_features][subdir] = "contrib"
-projects[uuid_features][version] = "1.0-alpha1"
+projects[uuid_features][version] = "1.x-dev"
 
 projects[advanced_help][subdir] = "contrib"
 projects[advanced_help][version] = "1.2"
