@@ -1,0 +1,22 @@
+--- ../arg_orig/store/ARC2_RemoteStore.php	2011-04-01 10:00:43.000000000 +0100
++++ store/ARC2_RemoteStore.php	2011-04-01 09:54:04.000000000 +0100
+@@ -63,12 +63,16 @@ class ARC2_RemoteStore extends ARC2_Clas
+     $p->parse($q, $src);
+     $infos = $p->getQueryInfos();
+     $t1 = ARC2::mtime();
+-    if (!$errs = $p->getErrors()) {
+-      $qt = $infos['query']['type'];
++    $qt = $infos['query'] ? $infos['query']['type'] : "select";
++    $errs = $p->getErrors();
++    if (!$errs) {
+       $r = array('query_type' => $qt, 'result' => $this->runQuery($q, $qt, $infos));
+     }
+     else {
+-      $r = array('result' => '');
++      // If the ARC parser found errors, we go ahead and run the query anyway, 
++      // returning errors from the endpoint, if there are any.
++      $this->resetErrors();
++      $r = array('query_type' => $qt, 'result' => $this->runQuery($q, $qt));
+     }
+     $t2 = ARC2::mtime();
+     $r['query_time'] = $t2 - $t1;
