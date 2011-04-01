@@ -145,6 +145,7 @@ libraries[arc][download][type] = "git"
 libraries[arc][download][url] = "https://github.com/semsol/arc2.git"
 libraries[arc][directory_name] = "arc"
 libraries[arc][type] = "library"
+libraries[arc][patch][] = "https://github.com/sidewinderlabs/linked-data-platform/raw/master/patches/arc_ignore_parser_errors.patch"
 
 libraries[flot][download][type] = "file"
 libraries[flot][download][url] = "http://flot.googlecode.com/files/flot-0.7.zip"
