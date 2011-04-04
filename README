@@ -1,0 +1,3 @@
+The Linked Data Platform is a toolkit for generating RDF from spreadsheets,  then importing that data into Drupal, where it can be visualised and re-published. This distribution currently contains everything you need to pull RDF data into Drupal, relying on modules such as sparql_views and rdf_importer to generate views and nodes driven by RDF.
+
+While Drupal is used for the visualisation and publishing, we rely on additional software such as XLWrap to generate RDF from spreadsheets, and Virtuoso to serve as a triple store . The tools and techniques that are used for these steps will be documented on the LDP github wiki, but we plan to release a VM / Amazon AMI that will contain everything you need for the entire process.
