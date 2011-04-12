@@ -1,0 +1,28 @@
+--- modules/openlayers_views/views/openlayers_views_style_data.inc	2011-03-10 23:13:01.000000000 +0000
++++ modules/openlayers_views/views/openlayers_views_style_data.inc.new	2011-04-12 09:49:40.000000000 +0100
+@@ -341,13 +341,22 @@ class openlayers_views_style_data extend
+             $excluded_fields[] = $handler->field_alias;
+           }
+         }
+-
++        
+         switch ($ds) {
+           case 'other_latlon':
+             $lat_field = $fields[$data_source['other_lat']]['field_alias'];
+             $lon_field = $fields[$data_source['other_lon']]['field_alias'];
+-            $lon = $record->$lon_field;
+-            $lat = $record->$lat_field;
++
++            // hack to access fields from sparql_views
++            if (is_array($record)) {
++              $lon = $record[$lon_field][0]['field'];
++              $lat = $record[$lat_field][0]['field'];
++            }
++            else {
++              $lon = $record->$lon_field;
++              $lat = $record->$lat_field;
++            }
++            
+             if (isset($lat) && isset($lon)) {
+               $feature['wkt'] = 'POINT(' . $lon . ' ' . $lat . ')';
+               $feature['projection'] = '4326';
