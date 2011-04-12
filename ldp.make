@@ -103,7 +103,6 @@ projects[advanced_help][subdir] = "contrib"
 projects[advanced_help][version] = "1.2"
 
 
-
 ; Patched
 projects[views][subdir] = "patched"
 projects[views][version] = "3.0-alpha3"
@@ -118,10 +117,15 @@ projects[sparql_views][download][type] = "git"
 projects[sparql_views][download][url] = "git@github.com:istos/sparql_views.git"
 projects[sparql_views][type] = "module"
 
-
 projects[features][subdir] = "patched"
 projects[features][version] = "1.0"
 projects[features][patch][] = "http://drupal.org/files/issues/968826-features-menu-uuid.patch"
+
+
+projects[openlayers][subdir] = "patched"
+projects[openlayers][version] = "dev"
+projects[openlayers][patch][] = "https://github.com/sidewinderlabs/linked-data-platform/raw/master/patches/openlayers_sparql_views.patch"
+
 
 ; Sandbox
 projects[rdfimporter][subdir] = "contrib"
