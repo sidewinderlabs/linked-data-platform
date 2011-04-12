@@ -123,7 +123,7 @@ projects[features][patch][] = "http://drupal.org/files/issues/968826-features-me
 
 
 projects[openlayers][subdir] = "patched"
-projects[openlayers][version] = "dev"
+projects[openlayers][version] = "2.x-dev"
 projects[openlayers][patch][] = "https://github.com/sidewinderlabs/linked-data-platform/raw/master/patches/openlayers_sparql_views.patch"
 
 
