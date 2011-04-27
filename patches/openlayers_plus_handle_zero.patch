@@ -1,8 +1,6 @@
-diff --git a/behaviors/openlayers_plus_behavior_scalepoints.inc b/behaviors/openlayers_plus_behavior_scalepoints.inc
-index 0f5f43e..850874e 100644
---- a/behaviors/openlayers_plus_behavior_scalepoints.inc
-+++ b/behaviors/openlayers_plus_behavior_scalepoints.inc
-@@ -206,6 +206,9 @@ class openlayers_plus_behavior_scalepoints extends openlayers_behavior {
+--- behaviors/openlayers_plus_behavior_scalepoints.inc.orig	2011-04-27 08:04:37.000000000 +0100
++++ behaviors/openlayers_plus_behavior_scalepoints.inc	2011-04-27 08:04:43.000000000 +0100
+@@ -206,6 +206,9 @@ class openlayers_plus_behavior_scalepoin
      foreach ($layers as $k => $layer) {
        // Get the field we are going to use.
        if ($field = $this->get_field($layer['features'])) {
