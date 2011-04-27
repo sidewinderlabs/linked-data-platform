@@ -1,0 +1,14 @@
+diff --git a/behaviors/openlayers_plus_behavior_scalepoints.inc b/behaviors/openlayers_plus_behavior_scalepoints.inc
+index 0f5f43e..850874e 100644
+--- a/behaviors/openlayers_plus_behavior_scalepoints.inc
++++ b/behaviors/openlayers_plus_behavior_scalepoints.inc
+@@ -206,6 +206,9 @@ class openlayers_plus_behavior_scalepoints extends openlayers_behavior {
+     foreach ($layers as $k => $layer) {
+       // Get the field we are going to use.
+       if ($field = $this->get_field($layer['features'])) {
++        foreach ($layer['features'] as $j => $feature) {
++          $layer['features'][$j]['attributes'][$field] = ($feature['attributes'][$field] == 'n/a') ? '0' : $feature['attributes'][$field];
++        }
+         // Get min/max per layer.
+         $min = isset($this->options['min']['value']) && is_numeric($this->options['min']['value']) ? $this->options['min']['value'] : 1000000;
+         $max = isset($this->options['max']['value']) && is_numeric($this->options['max']['value']) ? $this->options['max']['value'] : 0;
