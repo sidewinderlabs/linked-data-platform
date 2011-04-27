@@ -121,10 +121,15 @@ projects[features][subdir] = "patched"
 projects[features][version] = "1.0"
 projects[features][patch][] = "http://drupal.org/files/issues/968826-features-menu-uuid.patch"
 
-
 projects[openlayers][subdir] = "patched"
 projects[openlayers][version] = "2.x-dev"
 projects[openlayers][patch][] = "https://github.com/sidewinderlabs/linked-data-platform/raw/master/patches/openlayers_sparql_views.patch"
+
+projects[openlayers_plus][subdir] = "patched"
+projects[openlayers_plus][download][type] = "git"
+projects[openlayers_plus][download][url] = "https://github.com/developmentseed/openlayers_plus.git"
+projects[openlayers_plus][type] = "module"
+projects[openlayers_plus][patch][] = "https://github.com/sidewinderlabs/linked-data-platform/raw/master/patches/openlayers_plus_handle_zero.patch"
 
 
 ; Sandbox
