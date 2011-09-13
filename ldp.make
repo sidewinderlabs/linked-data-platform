@@ -102,6 +102,9 @@ projects[uuid_features][version] = "1.x-dev"
 projects[advanced_help][subdir] = "contrib"
 projects[advanced_help][version] = "1.2"
 
+projects[apachesolr][subdir] = "contrib"
+projects[apachesolr][version] = "1.2"
+
 
 ; Patched
 projects[views][subdir] = "patched"
@@ -131,12 +134,23 @@ projects[openlayers_plus][download][url] = "https://github.com/developmentseed/o
 projects[openlayers_plus][type] = "module"
 projects[openlayers_plus][patch][] = "https://github.com/sidewinderlabs/linked-data-platform/raw/master/patches/openlayers_plus_handle_zero.patch"
 
+projects[apachesolr_views][subdir] = "patched"
+projects[apachesolr_views][type] = "module"
+projects[apachesolr_views][download][type] = "git"
+projects[apachesolr_views][download][url] = "git://github.com/markbirbeck/apachesolr_views.git"
+
 
 ; Sandbox
 projects[rdfimporter][subdir] = "contrib"
 projects[rdfimporter][download][type] = "git"
 projects[rdfimporter][download][url] = "http://git.drupal.org/sandbox/milesw/1085078.git"
 projects[rdfimporter][type] = "module"
+
+
+projects[apachesolr_passthru][subdir] = "contrib"
+projects[apachesolr_passthru][type] = "module"
+projects[apachesolr_passthru][download][type] = "git"
+projects[apachesolr_passthru][download][url] = "git://github.com/markbirbeck/apachesolr_passthru.git"
 
 
 ; Features
@@ -176,3 +190,7 @@ libraries[jsplumb][download][type] = "get"
 libraries[jsplumb][download][url] = "http://jsplumb.googlecode.com/files/jquery.jsPlumb-1.2.3-all-min.js"
 libraries[jsplumb][destination] = "modules/patched/sparql_views/js"
 
+libraries[SolrPhpClient][download][type] = "get"
+libraries[SolrPhpClient][download][url] = "http://solr-php-client.googlecode.com/files/SolrPhpClient.r22.2009-11-09.tgz"
+libraries[SolrPhpClient][directory_name] = "SolrPhpClient"
+libraries[SolrPhpClient][destination] = "modules/contrib/apachesolr"
