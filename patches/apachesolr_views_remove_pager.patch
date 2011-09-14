@@ -1,7 +1,7 @@
-diff --git a/apachesolr_views_query.inc b/apachesolr_views_query.inc
+diff --git apachesolr_views_query.inc apachesolr_views_query.inc
 index 3efed9a..e6de9d3 100644
---- a/apachesolr_views_query.inc
-+++ b/apachesolr_views_query.inc
+--- apachesolr_views_query.inc
++++ apachesolr_views_query.inc
 @@ -308,9 +308,6 @@ class apachesolr_views_query extends views_plugin_query implements Drupal_Solr_Q
      $this->_current_display = $view->current_display;
      $this->_current_views_name = $view->name;

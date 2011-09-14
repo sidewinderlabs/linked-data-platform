@@ -1,14 +1,14 @@
-diff --git a/apachesolr_passthru.module b/apachesolr_passthru.module
-index e09c345..7d60447 100644
---- a/apachesolr_passthru.module
-+++ b/apachesolr_passthru.module
+diff --git apachesolr_passthru.module apachesolr_passthru.module
+index e09c345..1117b5e 100644
+--- apachesolr_passthru.module
++++ apachesolr_passthru.module
 @@ -59,6 +59,9 @@ function apachesolr_passthru_apachesolr_modify_query(&$query, &$params, $caller)
      //
      $params['fl'] .= ',address_line_1,address_line_2,address_line_3,address_line_4,company_number,postcode,sic_trade_classification_code';
    }
 +
-+ // Set maximum rows returned to a large value
-+ $query->set_limit(variable_get('apachesolr_passthru_limit', 10000));
++  // Set maximum rows returned to a large value
++  $query->set_limit(variable_get('apachesolr_passthru_limit', 10000));
  }
  
  function _get_apachesolr_passthru_field_list($solr_server = NULL,$solr_port = NULL, $solr_path = NULL) {
