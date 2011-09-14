@@ -180,9 +180,8 @@ libraries[tinymce][download][url] = "https://github.com/downloads/tinymce/tinymc
 libraries[tinymce][directory_name] = "tinymce"
 libraries[tinymce][type] = "library"
 
-libraries[jquery_ui][download][type] = "git"
-libraries[jquery_ui][download][url] = "https://github.com/jquery/jquery-ui"
-libraries[jquery_ui][download][tag] = "1.8.16"
+libraries[jquery_ui][download][type] = "get"
+libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery-ui-1.7.3.zip"
 libraries[jquery_ui][directory_name] = "jquery.ui"
 libraries[jquery_ui][destination] = "modules/contrib/jquery_ui"
 
