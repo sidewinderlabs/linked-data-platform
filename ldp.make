@@ -107,18 +107,10 @@ projects[apachesolr][version] = "1.2"
 
 
 ; Patched
+projects[views][type] = "module"
 projects[views][subdir] = "patched"
-projects[views][version] = "3.0-alpha3"
-; Patches added to support sparql_views
-projects[views][patch][] = "http://drupal.org/files/issues/views_621142-16_2_0_1_0.patch"
-projects[views][patch][] = "http://srvgal12.deri.ie/views_621142-39.patch"
-; Broken/missing handler
-projects[views][patch][] = "http://drupal.org/files/issues/views_broken-handler_953716_3.patch"
-
-projects[sparql_views][subdir] = "patched"
-projects[sparql_views][download][type] = "git"
-projects[sparql_views][download][url] = "git@github.com:istos/sparql_views.git"
-projects[sparql_views][type] = "module"
+projects[views][download][type] = get
+projects[views][download][url] = http://drupalcode.org/project/views.git/snapshot/125d4022860ef0f809d8dc6fa726161e144dbf7e.tar.gz
 
 projects[features][subdir] = "patched"
 projects[features][version] = "1.0"
@@ -138,6 +130,7 @@ projects[apachesolr_views][subdir] = "patched"
 projects[apachesolr_views][type] = "module"
 projects[apachesolr_views][download][type] = "git"
 projects[apachesolr_views][download][url] = "git://github.com/markbirbeck/apachesolr_views.git"
+projects[apachesolr_views][patch][] = "https://raw.github.com/robhardwick/linked-data-platform/solr/patches/apachesolr_views_remove_pager.patch"
 
 
 ; Sandbox
@@ -151,6 +144,7 @@ projects[apachesolr_passthru][subdir] = "contrib"
 projects[apachesolr_passthru][type] = "module"
 projects[apachesolr_passthru][download][type] = "git"
 projects[apachesolr_passthru][download][url] = "git://github.com/markbirbeck/apachesolr_passthru.git"
+projects[apachesolr_passthru][patch][] = "https://raw.github.com/robhardwick/linked-data-platform/solr/patches/apachesolr_passthru_increase_rows.patch"
 
 
 ; Features
