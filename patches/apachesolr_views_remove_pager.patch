@@ -1,0 +1,25 @@
+diff --git apachesolr_views_query.inc apachesolr_views_query.inc
+index 3efed9a..e6de9d3 100644
+--- apachesolr_views_query.inc
++++ apachesolr_views_query.inc
+@@ -308,9 +308,6 @@ class apachesolr_views_query extends views_plugin_query implements Drupal_Solr_Q
+     $this->_current_display = $view->current_display;
+     $this->_current_views_name = $view->name;
+ 
+-    // Let the pager modify the query to add limits.
+-    $this->pager->pre_execute($this->_query, $args);
+-
+     try {
+       $response = $this->_solr_service->search($this->_query, $this->offset, $this->limit, $this->_params);
+       
+@@ -380,10 +377,6 @@ class apachesolr_views_query extends views_plugin_query implements Drupal_Solr_Q
+       apachesolr_failure(t('Solr search'), is_null($query) ? $this->_keys : $query->get_query_basic());
+     }
+ 
+-    $this->pager->total_items = $view->total_rows;
+-    $this->pager->update_page_info();
+-    $this->pager->post_execute($view->result);
+-
+     $view->execute_time = views_microtime() - $start_time;
+   }
+ 
