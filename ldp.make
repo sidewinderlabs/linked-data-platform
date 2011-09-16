@@ -102,20 +102,15 @@ projects[uuid_features][version] = "1.x-dev"
 projects[advanced_help][subdir] = "contrib"
 projects[advanced_help][version] = "1.2"
 
+projects[apachesolr][subdir] = "contrib"
+projects[apachesolr][version] = "1.2"
+
 
 ; Patched
+projects[views][type] = "module"
 projects[views][subdir] = "patched"
-projects[views][version] = "3.0-alpha3"
-; Patches added to support sparql_views
-projects[views][patch][] = "http://drupal.org/files/issues/views_621142-16_2_0_1_0.patch"
-projects[views][patch][] = "http://srvgal12.deri.ie/views_621142-39.patch"
-; Broken/missing handler
-projects[views][patch][] = "http://drupal.org/files/issues/views_broken-handler_953716_3.patch"
-
-projects[sparql_views][subdir] = "patched"
-projects[sparql_views][download][type] = "git"
-projects[sparql_views][download][url] = "git@github.com:istos/sparql_views.git"
-projects[sparql_views][type] = "module"
+projects[views][download][type] = get
+projects[views][download][url] = http://drupalcode.org/project/views.git/snapshot/125d4022860ef0f809d8dc6fa726161e144dbf7e.tar.gz
 
 projects[features][subdir] = "patched"
 projects[features][version] = "1.0"
@@ -131,12 +126,25 @@ projects[openlayers_plus][download][url] = "https://github.com/developmentseed/o
 projects[openlayers_plus][type] = "module"
 projects[openlayers_plus][patch][] = "https://github.com/sidewinderlabs/linked-data-platform/raw/master/patches/openlayers_plus_handle_zero.patch"
 
+projects[apachesolr_views][subdir] = "patched"
+projects[apachesolr_views][type] = "module"
+projects[apachesolr_views][download][type] = "git"
+projects[apachesolr_views][download][url] = "git://github.com/markbirbeck/apachesolr_views.git"
+projects[apachesolr_views][patch][] = "https://raw.github.com/robhardwick/linked-data-platform/solr/patches/apachesolr_views_remove_pager.patch"
+
 
 ; Sandbox
 projects[rdfimporter][subdir] = "contrib"
 projects[rdfimporter][download][type] = "git"
 projects[rdfimporter][download][url] = "http://git.drupal.org/sandbox/milesw/1085078.git"
 projects[rdfimporter][type] = "module"
+
+
+projects[apachesolr_passthru][subdir] = "contrib"
+projects[apachesolr_passthru][type] = "module"
+projects[apachesolr_passthru][download][type] = "git"
+projects[apachesolr_passthru][download][url] = "git://github.com/markbirbeck/apachesolr_passthru.git"
+projects[apachesolr_passthru][patch][] = "https://raw.github.com/robhardwick/linked-data-platform/solr/patches/apachesolr_passthru_increase_rows.patch"
 
 
 ; Features
@@ -166,9 +174,8 @@ libraries[tinymce][download][url] = "https://github.com/downloads/tinymce/tinymc
 libraries[tinymce][directory_name] = "tinymce"
 libraries[tinymce][type] = "library"
 
-libraries[jquery_ui][download][type] = "git"
-libraries[jquery_ui][download][url] = "https://github.com/jquery/jquery-ui"
-libraries[jquery_ui][download][tag] = "1.8.16"
+libraries[jquery_ui][download][type] = "get"
+libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery-ui-1.7.3.zip"
 libraries[jquery_ui][directory_name] = "jquery.ui"
 libraries[jquery_ui][destination] = "modules/contrib/jquery_ui"
 
@@ -176,3 +183,7 @@ libraries[jsplumb][download][type] = "get"
 libraries[jsplumb][download][url] = "http://jsplumb.googlecode.com/files/jquery.jsPlumb-1.2.3-all-min.js"
 libraries[jsplumb][destination] = "modules/patched/sparql_views/js"
 
+libraries[SolrPhpClient][download][type] = "get"
+libraries[SolrPhpClient][download][url] = "http://solr-php-client.googlecode.com/files/SolrPhpClient.r22.2009-11-09.tgz"
+libraries[SolrPhpClient][directory_name] = "SolrPhpClient"
+libraries[SolrPhpClient][destination] = "modules/contrib/apachesolr"
